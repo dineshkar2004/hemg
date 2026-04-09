@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     const targetElements = document.querySelectorAll(
-        '.feature-card, .section-header, .banner-box, .hero-card, .hero-cards, .contact-info-card, .contact-form-container'
+        '.feature-card, .section-header, .banner-box, .contact-info-card, .contact-form-container, .trust-strip, .reveal, .compliance-box'
     );
 
 
@@ -132,17 +132,68 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
         mobileLinks.forEach(link => {
-
             link.addEventListener('click', () => {
-
-                menuOverlay.classList.remove('active');
-                menuToggle.classList.remove('active');
-                document.body.classList.remove('menu-open');
-
+                if (!link.closest('.mobile-dropdown')) {
+                    menuOverlay.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                    document.body.classList.remove('menu-open');
+                }
             });
-
         });
 
+        // Mobile dropdown toggle
+        const mobileDropdowns = document.querySelectorAll('.mobile-dropdown');
+        mobileDropdowns.forEach(dropdown => {
+            const toggle = dropdown.querySelector('a');
+            toggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                dropdown.classList.toggle('active');
+            });
+        });
+
+    }
+
+
+    // =========================
+    // HERO CAROUSEL
+    // =========================
+
+    const carousel = document.querySelector('.hero-carousel');
+    if (carousel) {
+        const slides = carousel.querySelectorAll('.carousel-slide');
+        const indicators = carousel.querySelectorAll('.indicator');
+        let currentSlide = 0;
+        let slideInterval;
+
+        const showSlide = (n) => {
+            slides[currentSlide].classList.remove('active');
+            indicators[currentSlide].classList.remove('active');
+            currentSlide = (n + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+            indicators[currentSlide].classList.add('active');
+        };
+
+        const nextSlide = () => {
+            showSlide(currentSlide + 1);
+        };
+
+        const startInterval = () => {
+            slideInterval = setInterval(nextSlide, 3000);
+        };
+
+        const resetInterval = () => {
+            clearInterval(slideInterval);
+            startInterval();
+        };
+
+        indicators.forEach((indicator, i) => {
+            indicator.addEventListener('click', () => {
+                showSlide(i);
+                resetInterval();
+            });
+        });
+
+        startInterval();
     }
 
 
@@ -342,5 +393,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     initHeroWaves();
+
+
+    // =========================
+    // CONTACT FORM HANDLING
+    // =========================
+
+    const contactForm = document.getElementById('contact-form');
+    const successMsg = document.getElementById('form-success-msg');
+
+    if (contactForm && successMsg) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // In a real app, you'd send data to a backend here.
+            // For now, we simulate success.
+            
+            contactForm.style.display = 'none';
+            successMsg.style.display = 'block';
+            
+            // Scroll success message into view if needed
+            successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+    }
 
 });
