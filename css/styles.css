@@ -20,6 +20,13 @@ html {
     box-sizing: border-box;
 }
 
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
 
 body {
     font-family: 'Inter', sans-serif;
@@ -1758,6 +1765,18 @@ body.menu-open {
         transform: scale(0.85);
         margin: -40px auto;
     }
+
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .header-right .btn {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1815,22 +1834,9 @@ body.menu-open {
         gap: 20px;
     }
 
-    .nav-links {
-        display: none;
-    }
-
-    .mobile-menu-toggle {
-        display: flex;
-    }
-
     .header-content {
         justify-content: space-between;
         /* Revert to standard for logo/toggle */
-    }
-
-    .header-right .btn {
-        display: none;
-        /* Hide primary contact btn on mobile header */
     }
 
     /* Mobile Menu styles */
@@ -1966,6 +1972,12 @@ body.menu-open {
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.04);
     height: 100%;
     transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .contact-info-card {
+        padding: 40px 24px;
+    }
 }
 
 .contact-info-card:hover {
@@ -2124,7 +2136,7 @@ textarea.form-input {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .form-grid {
         grid-template-columns: 1fr;
     }
@@ -2539,7 +2551,7 @@ textarea.form-input {
 /* Case Studies & Resources Page Styles */
 .case-studies-main-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 32px;
 }
 
@@ -2652,6 +2664,16 @@ textarea.form-input {
 @media (max-width: 768px) {
     .case-studies-main-grid {
         grid-template-columns: 1fr;
+    }
+
+    .case-study-card {
+        border-radius: 16px;
+    }
+
+    .case-card-header,
+    .case-card-body,
+    .case-card-footer {
+        padding: 20px;
     }
 }
 
@@ -2781,7 +2803,7 @@ textarea.form-input {
     margin-bottom: 20px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .form-grid {
         grid-template-columns: 1fr;
     }
@@ -2878,6 +2900,7 @@ textarea.form-input {
     0% {
         transform: translateX(0);
     }
+
     100% {
         transform: translateX(-50%);
     }
