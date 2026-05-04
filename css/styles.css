@@ -330,7 +330,26 @@ a {
 }
 
 .mobile-menu-overlay {
-    display: none;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-dark);
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-100%);
+    transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.mobile-menu-overlay.active {
+    transform: translateY(0);
+    pointer-events: auto;
+    visibility: visible;
 }
 
 .mobile-menu-toggle .bar {
@@ -1756,7 +1775,7 @@ body.menu-open {
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1129px) {
     .hero-title {
         font-size: 40px;
     }
@@ -1776,6 +1795,55 @@ body.menu-open {
 
     .header-right .btn {
         display: none;
+    }
+
+    /* Mobile Menu Interior Styles */
+    .mobile-nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .mobile-nav-links a {
+        color: var(--text-white);
+        font-size: 24px;
+        font-weight: 600;
+        width: 100%;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .mobile-dropdown {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mobile-dropdown-menu {
+        display: none;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 16px;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 20px;
+        border-radius: 12px;
+        width: 100%;
+    }
+
+    .mobile-dropdown.active .mobile-dropdown-menu {
+        display: flex;
+    }
+
+    .mobile-dropdown-menu a {
+        font-size: 18px !important;
+        font-weight: 500 !important;
+        opacity: 0.8;
     }
 }
 
@@ -1839,69 +1907,9 @@ body.menu-open {
         /* Revert to standard for logo/toggle */
     }
 
-    /* Mobile Menu styles */
-    .mobile-menu-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: var(--primary-dark);
-        z-index: 999;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transform: translateY(-100%);
-        transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-    }
+    /* Mobile Menu styles — base rules set globally above, only show on mobile */
 
-    .mobile-menu-overlay.active {
-        transform: translateY(0);
-    }
-
-    .mobile-nav-links {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 32px;
-    }
-
-    .mobile-nav-links a {
-        color: var(--text-white);
-        font-size: 20px;
-        font-weight: 600;
-        width: 100%;
-        text-align: center;
-    }
-
-    .mobile-dropdown {
-        width: 100%;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .mobile-dropdown-menu {
-        display: none;
-        flex-direction: column;
-        gap: 12px;
-        margin-top: 12px;
-        background: rgba(255, 255, 255, 0.05);
-        padding: 16px;
-        border-radius: 8px;
-        width: 100%;
-    }
-
-    .mobile-dropdown.active .mobile-dropdown-menu {
-        display: flex;
-    }
-
-    .mobile-dropdown-menu a {
-        font-size: 16px !important;
-        font-weight: 500 !important;
-        opacity: 0.8;
-    }
+    /* Mobile Menu styles — base rules set globally above, moved to 1129px breakpoint */
 
     .radar-chart {
         transform: scale(0.6);
