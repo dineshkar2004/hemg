@@ -326,19 +326,73 @@
         <div class="container">
             <div class="section-header center">
                 <h2 class="section-title">Discipline-Based Execution Tracking</h2>
-                <p class="section-subtitle">A unified view across all engineering disciplines for total project synchronization.</p>
+                <p class="section-subtitle">A unified view across all engineering disciplines for total project
+                    synchronization.</p>
             </div>
 
             <style>
-            .tabs-container { margin-top: 40px; }
-            .tabs-nav { display: flex; gap: 8px; border-bottom: 2px solid var(--border-gray); margin-bottom: 30px; overflow-x: auto; padding-bottom: 2px; scrollbar-width: none; }
-            .tabs-nav::-webkit-scrollbar { display: none; }
-            .tab-btn { background: transparent; border: none; font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 600; color: var(--text-gray); padding: 12px 24px; cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -2px; transition: all 0.3s ease; white-space: nowrap; }
-            .tab-btn:hover { color: var(--primary-dark); }
-            .tab-btn.active { color: var(--accent-orange); border-bottom-color: var(--accent-orange); }
-            .tab-pane { display: none; animation: fadeIn 0.4s ease forwards; }
-            .tab-pane.active { display: block; }
-            @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+                .tabs-container {
+                    margin-top: 40px;
+                }
+
+                .tabs-nav {
+                    display: flex;
+                    gap: 8px;
+                    border-bottom: 2px solid var(--border-gray);
+                    margin-bottom: 30px;
+                    overflow-x: auto;
+                    padding-bottom: 2px;
+                    scrollbar-width: none;
+                }
+
+                .tabs-nav::-webkit-scrollbar {
+                    display: none;
+                }
+
+                .tab-btn {
+                    background: transparent;
+                    border: none;
+                    font-family: 'Inter', sans-serif;
+                    font-size: 15px;
+                    font-weight: 600;
+                    color: var(--text-gray);
+                    padding: 12px 24px;
+                    cursor: pointer;
+                    border-bottom: 3px solid transparent;
+                    margin-bottom: -2px;
+                    transition: all 0.3s ease;
+                    white-space: nowrap;
+                }
+
+                .tab-btn:hover {
+                    color: var(--primary-dark);
+                }
+
+                .tab-btn.active {
+                    color: var(--accent-orange);
+                    border-bottom-color: var(--accent-orange);
+                }
+
+                .tab-pane {
+                    display: none;
+                    animation: fadeIn 0.4s ease forwards;
+                }
+
+                .tab-pane.active {
+                    display: block;
+                }
+
+                @keyframes fadeIn {
+                    from {
+                        opacity: 0;
+                        transform: translateY(10px);
+                    }
+
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
             </style>
 
             <div class="tabs-container reveal">
@@ -349,18 +403,27 @@
                     <button class="tab-btn" data-tab="mechanical">Mechanical</button>
                     <button class="tab-btn" data-tab="architectural">Architectural</button>
                 </div>
-                
+
                 <div class="tabs-content">
                     <!-- Piping Tab -->
                     <div class="tab-pane active" id="tab-piping">
-                        <div style="background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid var(--border-gray);">
-                            <h3 style="font-size: 24px; margin-bottom: 20px; color: var(--primary-dark);">Piping Works &mdash; Complete Test Pack & Punch List Control</h3>
+                        <div
+                            style="background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid var(--border-gray);">
+                            <h3 style="font-size: 24px; margin-bottom: 20px; color: var(--primary-dark);">Piping Works
+                                &mdash; Complete Test Pack & Punch List Control</h3>
                             <p style="font-size: 16px; color: var(--text-gray); line-height: 1.7; margin-bottom: 30px;">
-                                Upload ISO drawings and link them to individual test packs. Create test packs in bulk or individually. Each test pack contains: drawing reference, test limits, pressure test parameters, inspector sign-off, A/B/C punch list, and post-test reinstatement records. Track completion from fabrication through hydro/pneumatic test to system handover in one continuous digital record.
+                                Upload ISO drawings and link them to individual test packs. Create test packs in bulk or
+                                individually. Each test pack contains: drawing reference, test limits, pressure test
+                                parameters, inspector sign-off, A/B/C punch list, and post-test reinstatement records.
+                                Track completion from fabrication through hydro/pneumatic test to system handover in one
+                                continuous digital record.
                             </p>
-                            
-                            <h4 style="font-size: 16px; margin-bottom: 16px; font-weight: 700; color: var(--primary-dark);">Features included:</h4>
-                            <ul style="list-style-type: disc; padding-left: 20px; color: var(--text-gray); line-height: 1.8;">
+
+                            <h4
+                                style="font-size: 16px; margin-bottom: 16px; font-weight: 700; color: var(--primary-dark);">
+                                Features included:</h4>
+                            <ul
+                                style="list-style-type: disc; padding-left: 20px; color: var(--text-gray); line-height: 1.8;">
                                 <li>ISO drawing upload and drawing-to-test-pack linking</li>
                                 <li>Bulk test pack creation and assignment</li>
                                 <li>Test pack summary dashboard with system-level status</li>
@@ -371,17 +434,24 @@
                             </ul>
                         </div>
                     </div>
-                    
+
                     <!-- Other Tabs (Placeholders) -->
                     <div class="tab-pane" id="tab-civil">
-                        <div style="background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid var(--border-gray);">
-                            <h3 style="font-size: 24px; margin-bottom: 20px; color: var(--primary-dark);">Civil Works</h3>
+                        <div
+                            style="background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid var(--border-gray);">
+                            <h3 style="font-size: 24px; margin-bottom: 20px; color: var(--primary-dark);">Civil Works
+                            </h3>
                             <p style="font-size: 16px; color: var(--text-gray); line-height: 1.7; margin-bottom: 30px;">
-                                Track civil construction activities including earthworks, foundations, structural slabs, and drainage. Punch lists linked to civil completion milestones with photographic evidence capture per item.
+                                Track civil construction activities including earthworks, foundations, structural slabs,
+                                and drainage. Punch lists linked to civil completion milestones with photographic
+                                evidence capture per item.
                             </p>
-                            
-                            <h4 style="font-size: 16px; margin-bottom: 16px; font-weight: 700; color: var(--primary-dark);">Features included:</h4>
-                            <ul style="list-style-type: disc; padding-left: 20px; color: var(--text-gray); line-height: 1.8;">
+
+                            <h4
+                                style="font-size: 16px; margin-bottom: 16px; font-weight: 700; color: var(--primary-dark);">
+                                Features included:</h4>
+                            <ul
+                                style="list-style-type: disc; padding-left: 20px; color: var(--text-gray); line-height: 1.8;">
                                 <li>Activity and area completion tracking</li>
                                 <li>Civil A/B/C punch list with photo evidence</li>
                                 <li>Milestone sign-off workflow</li>
@@ -390,14 +460,21 @@
                         </div>
                     </div>
                     <div class="tab-pane" id="tab-eni">
-                        <div style="background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid var(--border-gray);">
-                            <h3 style="font-size: 24px; margin-bottom: 20px; color: var(--primary-dark);">Electrical & Instrumentation</h3>
+                        <div
+                            style="background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid var(--border-gray);">
+                            <h3 style="font-size: 24px; margin-bottom: 20px; color: var(--primary-dark);">Electrical &
+                                Instrumentation</h3>
                             <p style="font-size: 16px; color: var(--text-gray); line-height: 1.7; margin-bottom: 30px;">
-                                Track E&I installation progress across cable trays, junction boxes, instrument loops, and control system hook-up. Loop test records and instrument calibration certificates managed digitally.
+                                Track E&I installation progress across cable trays, junction boxes, instrument loops,
+                                and control system hook-up. Loop test records and instrument calibration certificates
+                                managed digitally.
                             </p>
-                            
-                            <h4 style="font-size: 16px; margin-bottom: 16px; font-weight: 700; color: var(--primary-dark);">Features included:</h4>
-                            <ul style="list-style-type: disc; padding-left: 20px; color: var(--text-gray); line-height: 1.8;">
+
+                            <h4
+                                style="font-size: 16px; margin-bottom: 16px; font-weight: 700; color: var(--primary-dark);">
+                                Features included:</h4>
+                            <ul
+                                style="list-style-type: disc; padding-left: 20px; color: var(--text-gray); line-height: 1.8;">
                                 <li>Loop test record management</li>
                                 <li>Instrument calibration certificate tracking</li>
                                 <li>Cable tray and junction box completion</li>
@@ -407,14 +484,21 @@
                         </div>
                     </div>
                     <div class="tab-pane" id="tab-mechanical">
-                        <div style="background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid var(--border-gray);">
-                            <h3 style="font-size: 24px; margin-bottom: 20px; color: var(--primary-dark);">Mechanical Equipment</h3>
+                        <div
+                            style="background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid var(--border-gray);">
+                            <h3 style="font-size: 24px; margin-bottom: 20px; color: var(--primary-dark);">Mechanical
+                                Equipment</h3>
                             <p style="font-size: 16px; color: var(--text-gray); line-height: 1.7; margin-bottom: 30px;">
-                                Track static and rotating equipment installation, alignment checks, pre-commissioning procedures, and mechanical completion. Integrates directly with Bolted Joint Master™ for verified flange assembly at equipment nozzles.
+                                Track static and rotating equipment installation, alignment checks, pre-commissioning
+                                procedures, and mechanical completion. Integrates directly with Bolted Joint Master™ for
+                                verified flange assembly at equipment nozzles.
                             </p>
-                            
-                            <h4 style="font-size: 16px; margin-bottom: 16px; font-weight: 700; color: var(--primary-dark);">Features included:</h4>
-                            <ul style="list-style-type: disc; padding-left: 20px; color: var(--text-gray); line-height: 1.8;">
+
+                            <h4
+                                style="font-size: 16px; margin-bottom: 16px; font-weight: 700; color: var(--primary-dark);">
+                                Features included:</h4>
+                            <ul
+                                style="list-style-type: disc; padding-left: 20px; color: var(--text-gray); line-height: 1.8;">
                                 <li>Equipment installation checklist</li>
                                 <li>Shaft alignment records</li>
                                 <li>Pre-commissioning check sheets</li>
@@ -424,14 +508,20 @@
                         </div>
                     </div>
                     <div class="tab-pane" id="tab-architectural">
-                        <div style="background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid var(--border-gray);">
-                            <h3 style="font-size: 24px; margin-bottom: 20px; color: var(--primary-dark);">Architectural Works</h3>
+                        <div
+                            style="background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid var(--border-gray);">
+                            <h3 style="font-size: 24px; margin-bottom: 20px; color: var(--primary-dark);">Architectural
+                                Works</h3>
                             <p style="font-size: 16px; color: var(--text-gray); line-height: 1.7; margin-bottom: 30px;">
-                                Manage architectural scope including buildings, flooring, cladding, fireproofing, and fire-stopping. Area-based completion tracking with punch lists per zone.
+                                Manage architectural scope including buildings, flooring, cladding, fireproofing, and
+                                fire-stopping. Area-based completion tracking with punch lists per zone.
                             </p>
-                            
-                            <h4 style="font-size: 16px; margin-bottom: 16px; font-weight: 700; color: var(--primary-dark);">Features included:</h4>
-                            <ul style="list-style-type: disc; padding-left: 20px; color: var(--text-gray); line-height: 1.8;">
+
+                            <h4
+                                style="font-size: 16px; margin-bottom: 16px; font-weight: 700; color: var(--primary-dark);">
+                                Features included:</h4>
+                            <ul
+                                style="list-style-type: disc; padding-left: 20px; color: var(--text-gray); line-height: 1.8;">
                                 <li>Area-based completion tracking</li>
                                 <li>Architectural A/B/C punch list</li>
                                 <li>Fire-stopping and passive fire protection inspection records</li>
@@ -443,21 +533,21 @@
             </div>
 
             <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const tabBtns = document.querySelectorAll('.tab-btn');
-                const tabPanes = document.querySelectorAll('.tab-pane');
-                
-                tabBtns.forEach(btn => {
-                    btn.addEventListener('click', () => {
-                        tabBtns.forEach(b => b.classList.remove('active'));
-                        tabPanes.forEach(p => p.classList.remove('active'));
-                        
-                        btn.classList.add('active');
-                        const targetId = 'tab-' + btn.getAttribute('data-tab');
-                        document.getElementById(targetId).classList.add('active');
+                document.addEventListener('DOMContentLoaded', function () {
+                    const tabBtns = document.querySelectorAll('.tab-btn');
+                    const tabPanes = document.querySelectorAll('.tab-pane');
+
+                    tabBtns.forEach(btn => {
+                        btn.addEventListener('click', () => {
+                            tabBtns.forEach(b => b.classList.remove('active'));
+                            tabPanes.forEach(p => p.classList.remove('active'));
+
+                            btn.classList.add('active');
+                            const targetId = 'tab-' + btn.getAttribute('data-tab');
+                            document.getElementById(targetId).classList.add('active');
+                        });
                     });
                 });
-            });
             </script>
 
 
@@ -471,7 +561,10 @@
                 <span class="small-tag-line">Integrated Document Control</span>
                 <h2 class="section-title">Replace Email Chains with Structured Digital Workflows</h2>
                 <p class="section-subtitle" style="max-width: 800px; margin: 0 auto;">
-                    Managing the flow of engineering documents between client and contractor is one of the most time-consuming and error-prone activities on any large project. HEMG Project Lifecycle Commander™ includes a built-in Document Control module that replaces email chains, shared drives, and paper transmittals with a structured, auditable digital workflow.
+                    Managing the flow of engineering documents between client and contractor is one of the most
+                    time-consuming and error-prone activities on any large project. HEMG Project Lifecycle Commander™
+                    includes a built-in Document Control module that replaces email chains, shared drives, and paper
+                    transmittals with a structured, auditable digital workflow.
                 </p>
             </div>
 
@@ -479,7 +572,8 @@
                 <!-- Feature 1 -->
                 <div class="detail-feature-card reveal" style="background: var(--section-bg-gray); border: none;">
                     <div class="feature-icon-box" style="background: var(--primary-dark); color: white;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
                             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
                             <polyline points="17 8 12 3 7 8" />
                             <line x1="12" y1="3" x2="12" y2="15" />
@@ -487,13 +581,18 @@
                     </div>
                     <h3 style="color: var(--primary-dark);">Client-to-Contractor Document Sharing</h3>
                     <p style="color: var(--text-gray);">
-                        The client uploads approved engineering documents &mdash; P&IDs, isometrics, specifications, and standards &mdash; directly to the platform. Contractors access only the documents relevant to their scope. No email attachments. No version confusion. Every document is revision-controlled and access-logged. The correct revision is always available &mdash; to every authorised party &mdash; from any device.
+                        The client uploads approved engineering documents &mdash; P&IDs, isometrics, specifications, and
+                        standards &mdash; directly to the platform. Contractors access only the documents relevant to
+                        their scope. No email attachments. No version confusion. Every document is revision-controlled
+                        and access-logged. The correct revision is always available &mdash; to every authorised party
+                        &mdash; from any device.
                     </p>
                 </div>
                 <!-- Feature 2 -->
                 <div class="detail-feature-card reveal" style="background: var(--section-bg-gray); border: none;">
                     <div class="feature-icon-box" style="background: var(--primary-dark); color: white;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
                             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
                             <polyline points="14 2 14 8 20 8" />
                             <line x1="16" y1="13" x2="8" y2="13" />
@@ -503,13 +602,16 @@
                     </div>
                     <h3 style="color: var(--primary-dark);">Digital Transmittal Management</h3>
                     <p style="color: var(--text-gray);">
-                        Every document issued generates an automatic transmittal record containing: document title, revision number, date issued, recipient, and acknowledgement status. Full audit trail from first issue to final approval. No paper transmittals. No missing signatures.
+                        Every document issued generates an automatic transmittal record containing: document title,
+                        revision number, date issued, recipient, and acknowledgement status. Full audit trail from first
+                        issue to final approval. No paper transmittals. No missing signatures.
                     </p>
                 </div>
                 <!-- Feature 3 -->
                 <div class="detail-feature-card reveal" style="background: var(--section-bg-gray); border: none;">
                     <div class="feature-icon-box" style="background: var(--primary-dark); color: white;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
                             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
                             <polyline points="7 10 12 15 17 10" />
                             <line x1="12" y1="15" x2="12" y2="3" />
@@ -517,20 +619,27 @@
                     </div>
                     <h3 style="color: var(--primary-dark);">Contractor-to-Client Document Submission</h3>
                     <p style="color: var(--text-gray);">
-                        Contractors upload their deliverables &mdash; method statements, inspection test plans, welding procedures, and as-built drawings &mdash; directly through the platform for client review. Documents are version-controlled. No lost emails. No missing attachments. No 'which version did you send?' queries.
+                        Contractors upload their deliverables &mdash; method statements, inspection test plans, welding
+                        procedures, and as-built drawings &mdash; directly through the platform for client review.
+                        Documents are version-controlled. No lost emails. No missing attachments. No 'which version did
+                        you send?' queries.
                     </p>
                 </div>
                 <!-- Feature 4 -->
                 <div class="detail-feature-card reveal" style="background: var(--section-bg-gray); border: none;">
                     <div class="feature-icon-box" style="background: var(--primary-dark); color: white;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
                             <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
                             <path d="m9 12 2 2 4-4" />
                         </svg>
                     </div>
                     <h3 style="color: var(--primary-dark);">Client Review & QA/QC Approval Workflow</h3>
                     <p style="color: var(--text-gray);">
-                        Clients and QA/QC teams review submitted documents in-platform, add comments, approve, or return for revision. Every action is timestamped and attributed to the reviewer. The approved document library is always current, always complete, and permanently accessible to all authorised parties for the lifetime of the project.
+                        Clients and QA/QC teams review submitted documents in-platform, add comments, approve, or return
+                        for revision. Every action is timestamped and attributed to the reviewer. The approved document
+                        library is always current, always complete, and permanently accessible to all authorised parties
+                        for the lifetime of the project.
                     </p>
                 </div>
             </div>
@@ -649,8 +758,8 @@
                 <div class="footer-legal">
                     <a href="privacy-policy.html">Privacy Policy</a>
                     <a href="terms-of-use.html">Terms of Use</a>
-                    <a href="https://www.linkedin.com/company/hemg-group" target="_blank"
-                        class="social-link" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/company/hemg-group" target="_blank" class="social-link"
+                        aria-label="LinkedIn">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                             <path
                                 d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
